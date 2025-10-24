@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_interview/src/presentation/screens/home/home.dart';
 import 'package:flutter_interview/src/presentation/screens/on_boarding/widgets/header.dart';
 import 'package:flutter_interview/src/presentation/widgets/app_button.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -67,9 +68,22 @@ class OnBoarding extends StatelessWidget {
               ),
             ),
             SizedBox(height: 18),
-            AppButton(isOutlineButton: false, buttonText: 'Sign In'),
+            AppButton(
+              isOutlineButton: false,
+              buttonText: 'Sign In',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()),
+                );
+              },
+            ),
             SizedBox(height: 14),
-            AppButton(isOutlineButton: true, buttonText: 'Create Account'),
+            AppButton(
+              isOutlineButton: true,
+              buttonText: 'Create Account',
+              onTap: () {},
+            ),
           ],
         ),
       ),

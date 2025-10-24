@@ -23,7 +23,6 @@ class Header extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.pink,
                           image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/ob1.jpg'),
