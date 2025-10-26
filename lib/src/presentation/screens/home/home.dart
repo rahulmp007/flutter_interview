@@ -25,6 +25,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFFFFFF),
       bottomNavigationBar: SizedBox(
         height: 70,
 
@@ -111,19 +112,27 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: 19),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(30),
-                      ),
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            scale: 3.5,
+                    Container(
+                      height: 40,
+                      width: 40,
 
-                            image: AssetImage('assets/icons/filter.png'),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 1),
+                            blurRadius: 0.5,
+                            spreadRadius: 0,
+                            color: Colors.black.withValues(alpha: 0.1),
+                            blurStyle: BlurStyle.outer,
                           ),
+                        ],
+                        image: DecorationImage(
+                          scale: 3.5,
+
+                          image: AssetImage('assets/icons/filter.png'),
                         ),
                       ),
                     ),
@@ -299,48 +308,55 @@ class HomeHeader extends StatelessWidget {
 
         Row(
           children: [
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadiusGeometry.circular(30),
-              ),
-              elevation: 1,
-              child: Container(
-                height: 38,
-                width: 38,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
+            Container(
+              height: 38,
+              width: 38,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
 
-                  image: DecorationImage(
-                    scale: 3,
-                    image: AssetImage('assets/icons/setting.png'),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(0, 1),
+                    blurRadius: 0.5,
+                    spreadRadius: 0,
+                    color: Colors.black.withValues(alpha: 0.1),
+                    blurStyle: BlurStyle.outer,
                   ),
+                ],
+                image: DecorationImage(
+                  scale: 4,
+
+                  image: AssetImage('assets/icons/setting.png'),
                 ),
               ),
             ),
-            SizedBox(width: 4),
+            SizedBox(width: 8),
             Stack(
               children: [
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusGeometry.circular(30),
-                  ),
-                  elevation: 1,
-                  child: Container(
-                    height: 38,
-                    width: 38,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                      boxShadow: [],
-                      image: DecorationImage(
-                        scale: 2.6,
-                        image: AssetImage('assets/icons/noti.png'),
+                Container(
+                  height: 38,
+                  width: 38,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0, 1),
+                        blurRadius: 0.5,
+                        spreadRadius: 0,
+                        color: Colors.black.withValues(alpha: 0.1),
+                        blurStyle: BlurStyle.outer,
                       ),
+                    ],
+                    image: DecorationImage(
+                      scale: 4,
+
+                      image: AssetImage('assets/icons/noti.png'),
                     ),
                   ),
                 ),
-
                 Positioned(
                   right: 0,
                   child: Container(
